@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    
+
+
+
+    <script>
+var map = L.map('map').setView([48.5846, 7.75], 10);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+        console.log(map)
+        var haguenau = L.marker([48.8012, 7.7735]).addTo(map).bindPopup("Haguenau")
+        var siege = L.marker([48.550000, 7.738110]).addTo(map).bindPopup("ELAN Siege")
+        var avnColmar = L.marker([48.557630 ,7.747720]).addTo(map).bindPopup("202")
+    </script>
+</body>
+</html>
+
